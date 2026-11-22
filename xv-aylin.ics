@@ -1,0 +1,13 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Elysium//XV Aylin//ES
+BEGIN:VEVENT
+UID:xv-aylin-de-la-rosa-hernandez@elysium
+DTSTAMP:20261122T000000Z
+DTSTART:20270122T220000Z
+DTEND:20270123T013000Z
+SUMMARY:XV Años de Aylin De La Rosa Hernández
+LOCATION:Parroquia San José Obrero\, C. Izamal 195\, Lomas de Padierna\, Tlalpan\, CDMX
+DESCRIPTION:Misa 4:00 PM Parroquia San José Obrero. Recepción 5:30 PM Salón Palacio Real.
+END:VEVENT
+END:VCALENDAR

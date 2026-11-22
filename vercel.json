@@ -1,0 +1,30 @@
+{
+ "rewrites": [
+  {
+   "source": "/((?!.*\\.).*)",
+   "destination": "/index.html"
+  }
+ ],
+ "headers": [
+  {
+   "source": "/xv-aylin.ics",
+   "headers": [
+    {
+     "key": "Content-Type",
+     "value": "text/calendar; charset=utf-8"
+    },
+    {
+     "key": "Content-Disposition",
+     "value": "inline; filename=\"xv-aylin.ics\""
+    }
+   ]
+  }
+ ],
+ "redirects": [
+  {
+   "source": "/album",
+   "destination": "https://panel-invitados.vercel.app/subir/xv-aylin-de-la-rosa-hernandez",
+   "permanent": false
+  }
+ ]
+}
