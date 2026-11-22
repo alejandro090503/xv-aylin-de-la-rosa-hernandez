@@ -90,6 +90,16 @@ display:inline-block;padding:.22em .45em;margin:-.22em -.45em;line-height:1.25;b
 #hero{height:100vh;height:100dvh;min-height:620px;display:flex;align-items:flex-end;justify-content:center;overflow:hidden;text-align:center}
 .hero-bg{position:absolute;inset:-14% 0;overflow:hidden;background:var(--surface)}
 .hero-drift{position:absolute;inset:0;background:url('portada.jpg?v=2') center/cover no-repeat;transform-origin:50% 20%;animation:heroDrift 20s ease-in-out infinite alternate}
+.moon-glow{position:absolute;left:50%;top:20%;height:46%;aspect-ratio:1;transform:translate(-50%,-50%);mix-blend-mode:screen;pointer-events:none}
+.moon-glow b{position:absolute;border-radius:50%;display:block}
+.mg-far{inset:0;background:radial-gradient(circle closest-side,rgba(128,208,255,0) 21%,rgba(128,208,255,.4) 31%,rgba(128,190,255,.2) 45%,rgba(120,150,255,.07) 70%,rgba(120,150,255,0) 100%);opacity:.6;animation:moonFar 9s ease-in-out infinite}
+.mg-near{inset:17%;background:radial-gradient(circle closest-side,rgba(226,243,255,0) 34%,rgba(226,243,255,.62) 46%,rgba(205,232,252,.34) 60%,rgba(169,214,245,.11) 79%,rgba(169,214,245,0) 100%);opacity:.7;animation:moonNear 5.5s ease-in-out infinite}
+.mg-rim{inset:29%;background:radial-gradient(circle closest-side,rgba(255,255,255,0) 62%,rgba(255,255,255,.34) 76%,rgba(255,255,255,.1) 89%,rgba(255,255,255,0) 100%);opacity:.5;animation:moonRim 3.8s ease-in-out infinite}
+.mg-disc{inset:34%;background:radial-gradient(circle at 42% 38%,rgba(255,255,255,.3),rgba(214,236,255,.1) 62%,rgba(214,236,255,0) 74%);opacity:.25;animation:moonDisc 5.5s ease-in-out infinite}
+@keyframes moonFar{0%,100%{transform:scale(.97);opacity:.4}50%{transform:scale(1.1);opacity:.9}}
+@keyframes moonNear{0%,100%{opacity:.48}50%{opacity:1}}
+@keyframes moonRim{0%,100%{opacity:.3}50%{opacity:.85}}
+@keyframes moonDisc{0%,100%{opacity:.05}50%{opacity:.26}}
 @keyframes heroDrift{from{transform:translate3d(-1.5%,0,0) scale(1.04)}to{transform:translate3d(4%,3%,0) scale(1.16)}}
 .hero-glints{position:absolute;inset:0;mix-blend-mode:screen;pointer-events:none;overflow:hidden}
 .hero-glints i{position:absolute;border-radius:50%;background:radial-gradient(circle,rgba(201,232,255,.35),rgba(201,232,255,0) 68%);animation:gl1 28s ease-in-out infinite alternate,glb 9s ease-in-out infinite}
@@ -374,7 +384,7 @@ display:inline-block;padding:.22em .45em;margin:-.22em -.45em;line-height:1.25;b
 
 <main class="wrap" id="contenido">
   <section id="hero">
-    <div class="hero-bg"><i class="hero-drift"></i></div>
+    <div class="hero-bg"><i class="hero-drift"><span class="moon-glow" aria-hidden="true"><b class="mg-far"></b><b class="mg-near"></b><b class="mg-rim"></b><b class="mg-disc"></b></span></i></div>
     <div class="hero-glints"><i></i><i></i><i></i></div>
     <div class="hero-lens"></div>
     <div class="hero-dust" id="heroDust"></div>
