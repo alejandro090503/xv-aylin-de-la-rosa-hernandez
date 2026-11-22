@@ -201,7 +201,7 @@ display:inline-block;padding:.22em .45em;margin:-.22em -.45em;line-height:1.25;b
 .dcx-art{position:relative;width:100%;height:clamp(250px,70vw,330px);display:flex;align-items:flex-end;justify-content:center}
 /* Halo fijo: las figuras son oscuras y sin él se pierden en el fondo noche */
 .dcx-art::before{content:'';position:absolute;left:50%;top:50%;width:96%;height:92%;transform:translate(-50%,-50%);border-radius:50%;background:radial-gradient(closest-side,rgba(74,123,183,.5),rgba(46,83,132,.24) 58%,transparent);pointer-events:none}
-.dcx-img{position:relative;display:block;width:auto;height:100%;max-width:100%;object-fit:contain;transform-origin:50% 100%;filter:drop-shadow(0 0 1px rgba(242,250,255,.9)) drop-shadow(0 0 10px rgba(128,208,255,.38))}
+.dcx-img{position:relative;display:block;width:auto;height:100%;max-width:100%;object-fit:contain;transform-origin:50% 100%;filter:drop-shadow(0 0 2px rgba(242,250,255,.95)) drop-shadow(0 0 13px rgba(128,208,255,.8)) drop-shadow(0 0 30px rgba(128,208,255,.5))}
 .dcx-img--a{animation:dcxFloat 5.4s ease-in-out infinite}
 .dcx-img--b{animation:dcxFloat 6.1s ease-in-out -2.6s infinite reverse}
 #vestimenta.dcx-off .dcx-img{animation-play-state:paused}
