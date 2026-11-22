@@ -9,7 +9,7 @@
 <meta property="og:type" content="website">
 <meta property="og:title" content="Aylin De La Rosa Hernández · Mis XV Años">
 <meta property="og:description" content="Te invito a celebrar mis XV años. Ciudad de México, 22 de enero de 2027.">
-<meta property="og:image" content="https://xv-aylin-de-la-rosa-hernandez.vercel.app/og-image.jpg?v=1">
+<meta property="og:image" content="https://xv-aylin-de-la-rosa-hernandez.vercel.app/og-image.jpg?v=2">
 <meta property="og:image:type" content="image/jpeg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
@@ -89,8 +89,8 @@ display:inline-block;padding:.22em .45em;margin:-.22em -.45em;line-height:1.25;b
 /* Hero */
 #hero{height:100vh;height:100dvh;min-height:620px;display:flex;align-items:flex-end;justify-content:center;overflow:hidden;text-align:center}
 .hero-bg{position:absolute;inset:-14% 0;overflow:hidden;background:var(--surface)}
-.hero-drift{position:absolute;inset:0;background:url('portada.jpg') center/cover no-repeat;animation:heroDrift 20s ease-in-out infinite alternate}
-@keyframes heroDrift{from{transform:translate3d(-4%,-3%,0) scale(1.04)}to{transform:translate3d(4%,3%,0) scale(1.16)}}
+.hero-drift{position:absolute;inset:0;background:url('portada.jpg?v=2') center/cover no-repeat;transform-origin:50% 20%;animation:heroDrift 20s ease-in-out infinite alternate}
+@keyframes heroDrift{from{transform:translate3d(-1.5%,0,0) scale(1.04)}to{transform:translate3d(4%,3%,0) scale(1.16)}}
 .hero-glints{position:absolute;inset:0;mix-blend-mode:screen;pointer-events:none;overflow:hidden}
 .hero-glints i{position:absolute;border-radius:50%;background:radial-gradient(circle,rgba(201,232,255,.35),rgba(201,232,255,0) 68%);animation:gl1 28s ease-in-out infinite alternate,glb 9s ease-in-out infinite}
 .hero-glints i:nth-child(1){width:68%;aspect-ratio:1;left:-12%;top:8%}
@@ -367,8 +367,8 @@ display:inline-block;padding:.22em .45em;margin:-.22em -.45em;line-height:1.25;b
 <div id="sky" aria-hidden="true"><span class="shoot s1"></span><span class="shoot s2"></span></div>
 
 <div id="envelope-screen" role="button" aria-label="Abrir la invitación">
-  <img id="envImage" src="sobre.jpg" alt="Sobre de la invitación de XV años de Aylin, con sello de cera">
-  <video id="envVideo" src="sobre-apertura.mp4" muted playsinline preload="auto" poster="sobre.jpg"></video>
+  <img id="envImage" src="sobre.jpg?v=2" alt="Sobre de la invitación de XV años de Aylin, con sello de cera">
+  <video id="envVideo" src="sobre-apertura.mp4?v=2" muted playsinline preload="auto" poster="sobre.jpg?v=2"></video>
   <div class="env-tap" id="envTap">Toca para abrir</div>
 </div>
 
