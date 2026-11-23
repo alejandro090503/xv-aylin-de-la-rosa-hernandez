@@ -434,7 +434,7 @@ display:inline-block;padding:.22em .45em;margin:-.22em -.45em;line-height:1.25;b
     <h2 class="ttl fx-title"><span class="foil-text">Mi Familia</span></h2>
     <div class="orn" aria-hidden="true"><span class="orn-line"></span><img src="adornos/p-luna.png" alt="" onerror="this.remove()"><span class="orn-line"></span></div>
     <div class="fam">
-      <div class="card lev"><span class="role">Mis Padres</span><span class="fam-name stg">José Martín De La Rosa Rivas</span><span class="fam-and stg">y</span><span class="fam-name stg">Hilda Hernández Sánchez</span></div>
+      <div class="card lev"><span class="role">Mis Padres</span><span class="fam-name stg">José Martín De La Rosa Rivas</span><span class="fam-and stg">e</span><span class="fam-name stg">Hilda Hernández Sánchez</span></div>
       <div class="card lev l2"><span class="role">Mi Padrino</span><span class="fam-name stg">Cristian Fernando Perez De La Rosa</span></div>
     </div>
   </section>
@@ -554,9 +554,13 @@ display:inline-block;padding:.22em .45em;margin:-.22em -.45em;line-height:1.25;b
     <span class="eyebrow fx">Un Detalle de Cariño</span>
     <h2 class="ttl fx-title"><span class="foil-text">Mesa de Regalos</span></h2>
     <div class="orn" aria-hidden="true"><span class="orn-line"></span><img src="adornos/p-luna.png" alt="" onerror="this.remove()"><span class="orn-line"></span></div>
-    <div class="card sheen" style="max-width:340px;margin:auto" id="giftCard">
-      <p class="lead">Tu presencia es mi mejor regalo.</p>
-      <p class="data" style="margin-top:8px">Datos de mesa de regalos: <strong>por confirmar</strong></p>
+    <div class="gift-list" style="display:grid;gap:16px;max-width:340px;margin:auto">
+      <div class="card sheen" id="giftCard">
+        <p class="lead" style="font-weight:700">Tendremos lluvia de sobres en el evento.</p>
+      </div>
+      <div class="card sheen" id="giftCard2">
+        <p class="lead" style="font-weight:700">O también puedes darme un regalo de tu preferencia.</p>
+      </div>
     </div>
   </section>
 
@@ -821,7 +825,7 @@ function initMain(){
   document.querySelectorAll('.tilt').forEach(function(c){c.addEventListener('click',function(e){if(e.target.closest('a,iframe'))return;c.classList.toggle('is-up');});});
   var aq=document.getElementById('albumQr');if(Date.now()>=new Date('2027-01-22T00:00:00-06:00').getTime()){aq.classList.add('open');document.getElementById('albumNote').remove();}
 
-  if(RM){document.getElementById('giftCard').classList.add('in');return;}
+  if(RM){document.getElementById('giftCard').classList.add('in');document.getElementById('giftCard2').classList.add('in');return;}
 
   /* Hero al hacer scroll */
   gsap.fromTo('#heroText',{y:0,opacity:1,filter:'blur(0px)'},{y:-110,opacity:0,filter:'blur(10px)',ease:'none',scrollTrigger:{trigger:'#hero',start:'top top',end:'bottom 35%',scrub:true}});
@@ -841,7 +845,7 @@ function initMain(){
     rev(it,{x:i%2?-30:30,opacity:0},{x:0,opacity:1});
     var dot=it.querySelector('.itin-dot');gsap.fromTo(dot,{scale:.4},{scale:1,duration:.6,ease:'back.out(2.4)',immediateRender:false,scrollTrigger:{trigger:it,start:'top 90%',once:true}});
   });
-  ScrollTrigger.create({trigger:'#giftCard',start:'top 86%',once:true,onEnter:function(){document.getElementById('giftCard').classList.add('in');}});
+  ['giftCard','giftCard2'].forEach(function(id,i){ScrollTrigger.create({trigger:'#'+id,start:'top 90%',once:true,onEnter:function(){setTimeout(function(){document.getElementById(id).classList.add('in');},i*350);}});});
   initAutoScroll();
   setTimeout(function(){ScrollTrigger.refresh();},400);
 }
