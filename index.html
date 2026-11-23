@@ -828,6 +828,9 @@ function initMain(){
 
   if(RM){document.getElementById('giftCard').classList.add('in');document.getElementById('giftCard2').classList.add('in');return;}
 
+  /* Al terminar de abrir el sobre: primero la luna, después el nombre de Aylin */
+  gsap.fromTo('.hero-xv,.hero-name,.hero-last,.hero-date',{y:26,opacity:0},{y:0,opacity:1,duration:1.1,ease:'power2.out',stagger:.4,delay:.9,clearProps:'opacity,transform'});
+
   /* Hero al hacer scroll */
   gsap.fromTo('#heroText',{y:0,opacity:1,filter:'blur(0px)'},{y:-110,opacity:0,filter:'blur(10px)',ease:'none',scrollTrigger:{trigger:'#hero',start:'top top',end:'bottom 35%',scrub:true}});
   gsap.fromTo('.hero-bg',{y:0},{y:-70,ease:'none',scrollTrigger:{trigger:'#hero',start:'top top',end:'bottom top',scrub:true}});
