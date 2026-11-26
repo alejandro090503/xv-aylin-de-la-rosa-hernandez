@@ -206,6 +206,7 @@ display:inline-block;padding:.22em .45em;margin:-.22em -.45em;line-height:1.25;b
 .dcx-line{flex:1;height:1px;background:linear-gradient(90deg,transparent,#6E9CCB,#F2FAFF,#6E9CCB,transparent);opacity:.75}
 .dcx-rose{flex:none;width:26px;height:26px;color:#A9D6F5}
 
+.dcx-art-pair{height:clamp(330px,92vw,420px)}.dcx-pair{max-width:340px;margin:0 auto}
 .dcx-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(10px,4vw,26px);align-items:end}
 .dcx-fig{margin:0;min-width:0;display:flex;flex-direction:column;align-items:center;gap:14px}
 .dcx-art{position:relative;width:100%;height:clamp(250px,70vw,330px);display:flex;align-items:flex-end;justify-content:center}
@@ -500,27 +501,12 @@ display:inline-block;padding:.22em .45em;margin:-.22em -.45em;line-height:1.25;b
       <span class="dcx-line"></span>
     </div>
 
-    <div class="dcx-grid">
-      <figure class="dcx-fig">
-        <div class="dcx-art">
-          <img class="dcx-img dcx-img--a" src="caballero.png" width="300" height="610" alt="Caballero con traje formal oscuro" decoding="async">
-        </div>
-        <figcaption>
-          <span class="dcx-role">Caballeros</span>
-          <span class="dcx-attire">Traje formal</span>
-        </figcaption>
-      </figure>
-      <figure class="dcx-fig">
-        <div class="dcx-art">
-          <img class="dcx-img dcx-img--b" src="dama.png" width="248" height="604" alt="Dama con vestido largo oscuro" decoding="async">
-        </div>
-        <figcaption>
-          <span class="dcx-role">Damas</span>
-          <span class="dcx-attire">Vestido largo</span>
-        </figcaption>
-      </figure>
-    </div>
-
+    <figure class="dcx-fig dcx-pair">
+      <div class="dcx-art dcx-art-pair">
+        <img class="dcx-img dcx-img--a" src="pareja-formal.webp" width="520" height="1284" alt="Pareja con vestimenta formal: vestido largo negro y traje negro" decoding="async">
+      </div>
+      <figcaption><span class="dcx-role">Formal</span><span class="dcx-attire">Traje para caballeros · vestido largo para damas</span></figcaption>
+    </figure>
     <p class="dcx-note">Te esperamos con tu mejor atuendo formal</p>
     <p class="dcx-note" style="margin-top:14px;font-style:normal;font-family:'Jost',sans-serif;font-weight:500;font-size:17px;line-height:1.6;color:var(--text)">Evitar usar tonalidades azul cielo, queda reservado para la quinceañera.</p>
   </div>
